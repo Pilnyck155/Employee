@@ -1,15 +1,36 @@
+import java.util.Arrays;
+
 public class Test {
     public static void main(String[] args){
         EmployeeFactory employeeFactory = new EmployeeFactory();
-        Employee [] defaultEmployee = employeeFactory.generateEmployees(10);
-        //Designer[] defaultDesigner = employeeFactory.generateEmployees(5);
 
-       // EmployeeService employeeService = new EmployeeService(defaultEmployee, defaultDesigner);
+        Employee [] defaultEmployee = employeeFactory.getDefaultEmployees(20);
 
-        //employeeService.printEmployee(defaultDesigner);
-
+        EmployeeService employeeService = new EmployeeService(defaultEmployee);
         //employeeService.printEmployee(defaultEmployee);
 
+        double employeeSalary = employeeService.calculateSalaryAndBonus();
+        //System.out.println(employeeSalary);
+
+        //Employee findById = employeeService.getById(4);
+        //employeeService.printEmployee(findById);
+
+        //Employee findByName = employeeService.getByName("Anna");
+        //employeeService.printEmployee(findByName);
+
+        //employeeService.sortByName();
+        //employeeService.printEmployee(defaultEmployee);
+
+        //employeeService.sortByNameAndSalary();
+        //employeeService.printEmployee(defaultEmployee);
+
+
+        //employeeService.edit(defaultEmployee[4],8 );
+        //employeeService.printEmployee(defaultEmployee);
+        //Employee  removedEmployee = employeeService.remove(4);
+        //employeeService.printEmployee(defaultEmployee);
+        //employeeService.printEmployee(defaultEmployee[7]);
+        employeeService.add(defaultEmployee[1]);
 
     }
 }
