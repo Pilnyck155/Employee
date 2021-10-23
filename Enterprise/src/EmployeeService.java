@@ -133,7 +133,7 @@ public class EmployeeService {
     void add(Employee addEmployee){
         Employee[] newAddEmployeesArray = new Employee[employees.length+1];//21
         int lastIndex = newAddEmployeesArray.length-1; //20
-        for (int i = 0; i < employees.length-1; i++) {
+        for (int i = 0; i < employees.length; i++) {
             newAddEmployeesArray[i] = employees[i];
         }
         newAddEmployeesArray[lastIndex] = addEmployee;
